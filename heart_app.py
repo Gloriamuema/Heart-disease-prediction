@@ -152,23 +152,27 @@ if st.button("🔍 Predict Heart Disease", key="predict_button"):
         st.write(f"• {rec}")
 
     st.caption(f"Model Accuracy: {accuracy*100:.2f}%")
+ # -----------------------------
+# SHAP Explainability (Text Only)
+# -----------------------------
+st.subheader("🔍 Key Factors Influencing This Prediction")
 
-    # -----------------------------
-    # SHAP Explainability
-    # -----------------------------
-    explainer = shap.LinearExplainer(model, X_train_scaled, feature_perturbation="interventional")
-    shap_values = explainer.shap_values(input_scaled)
-    feature_contributions = dict(zip(feature_names, shap_values[0]))
+# Use SHAP to understand feature influence
+explainer = shap.LinearExplainer(model, X_train_scaled, feature_perturbation="interventional")
+shap_values = explainer.shap_values(input_scaled)
 
-    st.subheader("Top Feature Contributions:")
-    sorted_features = sorted(feature_contributions.items(), key=lambda x: abs(x[1]), reverse=True)
-    for feat, val in sorted_features[:5]:
-        if val > 0:
-            st.write(f"• **{feat}** increases risk.")
-        else:
-            st.write(f"• **{feat}** decreases risk.")
+# Pair feature names with their impact
+feature_contributions = dict(zip(feature_names, shap_values[0]))
 
-    st.subheader("SHAP Feature Impact Plot:")
-    plt.figure(figsize=(8,4))
-    shap.bar_plot(shap_values[0], feature_names=feature_names)
-    st.pyplot(plt)
+# Sort by strongest effect
+sorted_features = sorted(feature_contributions.items(), key=lambda x: abs(x[1]), reverse=True)
+
+# Clear text explanation
+st.write("The model based its prediction mainly on these factors:")
+for feat, val in sorted_features[:5]:
+    if val > 0:
+        st.write(f"• **{feat.replace('_', ' ').title()}** — increased the risk of heart disease.")
+    else:
+        st.write(f"• **{feat.replace('_', ' ').title()}** — decreased the risk of heart disease.")
+
+st.caption("Positive values indicate higher risk factors, while negative values indicate protective factors.")
