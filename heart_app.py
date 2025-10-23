@@ -133,7 +133,7 @@ X_train_df = model_bundle["X_train_df"]
 # -----------------------------
 # Sample data viewer
 # -----------------------------
-with st.expander("📊 View Sample Data"):
+with st.expander(" View Sample Data"):
     if df is not None:
         st.dataframe(df.head(8))
     else:
@@ -143,7 +143,7 @@ with st.expander("📊 View Sample Data"):
 # Input Form (Two columns)
 # -----------------------------
 st.markdown("<div class='card'>", unsafe_allow_html=True)
-st.subheader("🔹 Patient Information")
+st.subheader(" Patient Information")
 
 col1, col2 = st.columns(2)
 
@@ -190,7 +190,7 @@ input_df = pd.DataFrame([input_dict])[feature_names]  # enforce column order
 # -----------------------------
 # Predictions & UI Display
 # -----------------------------
-if st.button("🔍 Predict Heart Disease", key="predict_button"):
+if st.button(" Predict Heart Disease", key="predict_button"):
 
     # Scale input
     input_scaled = scaler.transform(input_df)
@@ -239,11 +239,11 @@ if st.button("🔍 Predict Heart Disease", key="predict_button"):
     # -----------------------------
     # Recommendations (human-friendly)
     # -----------------------------
-    st.subheader("🩺 Personalized Recommendations")
+    st.subheader(" Personalized Recommendations")
     if pred == 1:
         recommendations = [
             "Reduce cholesterol with a heart-healthy diet (more vegetables, lean proteins, less saturated fat).",
-            "Monitor and control blood pressure regularly — talk to a clinician about medications if elevated.",
+            "Monitor and control blood pressure regularly talk to a clinician about medications if elevated.",
             "Avoid strenuous exercise until cleared by a doctor; start low-impact activity after check-up.",
             "Manage stress, stop smoking, and limit alcohol intake."
         ]
@@ -251,7 +251,7 @@ if st.button("🔍 Predict Heart Disease", key="predict_button"):
     else:
         recommendations = [
             "Maintain a healthy lifestyle with regular moderate exercise (150 min/week recommended).",
-            "Keep a balanced diet — focus on whole foods and reduce processed foods.",
+            "Keep a balanced diet focus on whole foods and reduce processed foods.",
             "Continue regular health check-ups and monitor blood pressure and cholesterol.",
             "Keep body weight and stress levels in check."
         ]
@@ -263,7 +263,7 @@ if st.button("🔍 Predict Heart Disease", key="predict_button"):
     # -----------------------------
     # SHAP Explainability - Text Only (Top factors)
     # -----------------------------
-    st.subheader("🔎 Key Factors Influencing This Prediction")
+    st.subheader(" Key Factors Influencing This Prediction")
 
     # Create SHAP explainer (LinearExplainer is appropriate for linear models)
     try:
