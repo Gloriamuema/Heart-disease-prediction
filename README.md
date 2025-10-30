@@ -7,31 +7,31 @@ The model uses Logistic Regression for prediction and provides personalized feed
 Heart disease is one of the leading causes of death globally.
 This app helps identify individuals who may be at higher risk by analyzing clinical parameters such as:
 
-Age
-Blood pressure
-Cholesterol levels
-Heart rate
-ECG results
-Exercise-induced angina
+#Age
+#Blood pressure
+#Cholesterol levels
+#Heart rate
+#ECG results
+#Exercise-induced angina
 
 It uses a trained logistic regression model to output a probability score and provides insightful, easy-to-understand recommendations.
 
 # Key Features
-✅ Interactive UI – Input patient details easily through Streamlit widgets.
-✅ Instant Prediction – Get real-time results on heart disease likelihood.
-✅ Health Recommendations – Personalized advice based on prediction results.
-✅ Model Accuracy Display – View the trained model’s performance.
-✅ Clean Visual Design – A minimal and user-friendly layout.
+1. Interactive UI – Input patient details easily through Streamlit widgets.
+2. Instant Prediction – Get real-time results on heart disease likelihood.
+3. Health Recommendations – Personalized advice based on prediction results.
+4. Accuracy Display – View the trained model’s performance.
+5. Clean Visual Design – A minimal and user-friendly layout.
 
 # Tech Stack
-Component	Technology
-Frontend	Streamlit
-Data Handling	Pandas
-Machine Learning	Scikit-Learn
-Visualization	Matplotlib
-Language Python 3.8+
+Component	# Technology
+Frontend	# Streamlit
+Data Handling	# Pandas
+Machine Learning	# Scikit-Learn
+Visualization	# Matplotlib
+Language       # Python 3.8+
 
-📁 Project Structure
+# Project Structure
 heart_disease_app/
 HeartDiseaseTrain-Test.csv   # Dataset file
 heart_app.py                 # Main Streamlit app
