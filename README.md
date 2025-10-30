@@ -32,7 +32,7 @@ It uses a trained logistic regression model to output a probability score and pr
 7. Language       # Python 3.8+
 
 # Project Structure
-# project Name: heart_disease_prediction
+# heart_disease_prediction
 1. HeartDiseaseTrain-Test.csv   # Dataset file
 2. heart_app.py                 # Main Streamlit app
 3. requirements.txt             # Dependencies
