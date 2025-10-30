@@ -59,11 +59,11 @@ python -m streamlit run heart_app.py
 
 #  Model Details
 
-Algorithm: Logistic Regression
-Feature Scaling: StandardScaler
-Test Size: 20%
-Evaluation Metric: Accuracy Score
-Explainability: SHAP (removed graph for simplicity; textual feature impact provided)
+1. Algorithm: Logistic Regression
+2. Feature Scaling: StandardScaler
+3. Test Size: 20%
+4. Evaluation Metric: Accuracy Score
+5. Explainability: SHAP (removed graph for simplicity; textual feature impact provided)
 
 # Example Output
 
@@ -77,11 +77,11 @@ Explainability: SHAP (removed graph for simplicity; textual feature impact provi
 
 # Future Improvements
 
- Add more advanced models (Random Forest, XGBoost).
- Deploy on Streamlit Cloud or Hugging Face Spaces.
- Include SHAP visualizations for feature importance.
- Add user authentication and patient history tracking.
- Integrate with wearable health data APIs.
+1.  Add more advanced models (Random Forest, XGBoost).
+ 2. Deploy on Streamlit Cloud or Hugging Face Spaces.
+ 3. Include SHAP visualizations for feature importance.
+ 4. Add user authentication and patient history tracking.
+ 5. Integrate with wearable health data APIs.
 
 # Author
 Gloria Muema
