@@ -14,7 +14,7 @@ Heart rate
 ECG results
 Exercise-induced angina
 
-# It uses a trained logistic regression model to output a probability score and provides insightful, easy-to-understand recommendations.
+It uses a trained logistic regression model to output a probability score and provides insightful, easy-to-understand recommendations.
 
 # Key Features
 ✅ Interactive UI – Input patient details easily through Streamlit widgets.
@@ -33,14 +33,14 @@ Language Python 3.8+
 
 📁 Project Structure
 heart_disease_app/
-│
-├── HeartDiseaseTrain-Test.csv   # Dataset file
-├── heart_app.py                 # Main Streamlit app
-├── requirements.txt             # Dependencies
-└── README.md                    # Documentation
+HeartDiseaseTrain-Test.csv   # Dataset file
+heart_app.py                 # Main Streamlit app
+requirements.txt             # Dependencies
+README.md                    # Documentation
+Heart_Disease_Notebook.ipynb # Notebook
 
-⚙️ Installation & Setup
-#  Clone the repository
+# Installation & Setup
+Clone the repository
 git clone https://github.com/GloriamuemaHeart-disease-prediction.git
 cd Heart-disease-prediction
 
@@ -65,8 +65,6 @@ Test Size: 20%
 Evaluation Metric: Accuracy Score
 Explainability: SHAP (removed graph for simplicity; textual feature impact provided)
 
-
-
 # Example Output
 
 ✅ Low likelihood of heart disease (12.45%)
@@ -84,7 +82,6 @@ Explainability: SHAP (removed graph for simplicity; textual feature impact provi
  Include SHAP visualizations for feature importance.
  Add user authentication and patient history tracking.
  Integrate with wearable health data APIs.
-
 
 # Author
 Gloria Muema
