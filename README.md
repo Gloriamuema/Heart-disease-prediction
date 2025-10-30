@@ -1,8 +1,7 @@
-# Heart-disease-prediction
-# Heart Disease Prediction App
+# Heart-disease-prediction Project
 
-# A Streamlit-based machine learning web application that predicts the likelihood of heart disease based on patient health indicators.
-# The model uses Logistic Regression for prediction and provides personalized feedback and recommendations for heart health improvement.
+A Streamlit-based machine learning web application that predicts the likelihood of heart disease based on patient health indicators.
+The model uses Logistic Regression for prediction and provides personalized feedback and recommendations for heart health improvement.
 
 # Overview
 Heart disease is one of the leading causes of death globally.
