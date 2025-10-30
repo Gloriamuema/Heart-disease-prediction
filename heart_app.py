@@ -197,7 +197,8 @@ if st.button(" Predict Heart Disease", key="predict_button"):
     input_scaled = scaler.transform(input_df)
 
     # Predict
-    proba = model.predict_proba(input_scaled)[0, 1]  # probability of class '1'
+    # probability of class '1'
+    proba = model.predict_proba(input_scaled)[0, 1]  
     pred = int(model.predict(input_scaled)[0])
     risk_pct = proba * 100
 
